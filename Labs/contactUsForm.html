@@ -4,31 +4,88 @@
 <head>
     <title>Contact Us Form Lab</title>
 </head>
-<!-- blank comments are a hack to prevent auto format from squishing my code onto one line-->
+<style>
+    .leftColumn {
+        float: left;
+        width: 150px;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .rightColumn {
+        float: left;
+        width: 225px;
+    }
+
+    .leftColumnPadding {
+        padding: 5px 0;
+    }
+
+    .rightColumnPadding {
+        padding: 4px 0;
+    }
+
+    .textInput,
+    select,
+    textArea {
+        width: 100%;
+    }
+
+    textArea {
+        min-height: 100px
+    }
+</style>
 
 <body>
-    <form action=# method="POST">
-        First Name: <input type="text" /><br/>
-        <!-- -->
-        Last Name: <input type="text" />
-        </br/>
-        <!-- -->
-        Email: <input type="text" /></br>
-        <!-- -->
-        Type of Liscense:
-        <input type="radio" name="liscenseType" value="business" checked>Business</input>
-        <input type="radio" name="liscenseType" value="personal">Personal</input>
-        </br>
-        <!-- -->
-        Reason:<select name="reasons"><option value="Options">Options</option></select></br>
-        <!-- -->
-        Additonal Information:<textarea name="info" value="info"></textarea></br>
-        <!-- -->
-        <input type="checkbox">I have read the terms of service</input>
-        </br>
-        <!-- -->
-        <input type="submit" value="send request">
-    </form>
+    <!-- left column with 5px padding -->
+    <div class="leftColumn">
+        <div class="leftColumnPadding">First Name:</div>
+        <div class="leftColumnPadding">Last Name:</div>
+        <div class="leftColumnPadding">Email:</div>
+        <div class="leftColumnPadding">Type of Liscense:</div>
+        <div class="leftColumnPadding">Reason:</div>
+        <div class="leftColumnPadding">Additonal Information:</div>
+    </div>
+    <!-- right column with 4px padding -->
+    <div class="rightColumn">
+        <form action=# method="POST">
+            <!-- first name input -->
+            <div class="rightColumnPadding">
+                <input class="textInput" type="text" id="firstName" />
+            </div>
+            <!-- last name input -->
+            <div class="rightColumnPadding">
+                <input class="textInput" type="text" id="lastName" />
+            </div>
+            <!-- email input -->
+            <div class="rightColumnPadding">
+                <input class="textInput" type="text" id="email" />
+            </div>
+            <!-- liscenseType -->
+            <div class="rightColumnPadding">
+                <input type="radio" name="liscenseType" value="business" checked>Business</input>
+                <input type="radio" name="liscenseType" value="personal">Personal</input>
+            </div>
+            <!-- contact reason dropdown -->
+            <div class="rightColumnPadding">
+                <select name="reasonDropdown"><option value="Options">Options</option></select></br>
+            </div>
+            <!-- additonal information text area-->
+            <div class="rightColumnPadding">
+                <textarea name="info" value="info"></textarea></br>
+            </div>
+            <!-- terms of service checkbox -->
+            <div class="rightColumnPadding">
+                <input type="checkbox">I have read the terms of service</input>
+            </div>
+            <!-- submit button -->
+            <div class="rightColumnPadding">
+                <input style="float:right" type="submit" value="send request">
+            </div>
+        </form>
+        <!-- end of form -->
+    </div>
+    <!-- end of right column -->
 </body>
 
 </html>
