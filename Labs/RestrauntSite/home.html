@@ -1,48 +1,30 @@
 <!DOCTYPE html>
-<style>
-    h1 {
-        text-align: center;
-    }
-
-    a {
-        padding: 2% 2%;
-    }
-
-    img {
-        display: block;
-        width: 400px;
-        height: 150px;
-        margin: 0 auto;
-        padding: 20px 0px;
-        image-rendering: optimizeQuality;
-    }
-
-    div {
-        display: block;
-        width: 400px;
-        margin: 0 auto;
-        padding-top: 0px;
-        padding-bottom: 70px;
-        border: 1px solid black;
-    }
-
-    footer {
-        text-align: center;
-        position: relative;
-        bottom: 0px;
-        width: 100%;
-    }
-
-    p {
-        padding: 0px 10px;
-    }
-
-</style>
 <html>
 
 <head>
-    <h1>Slaughter Garden</h1>
     <title>Home Page</title>
+    <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+    <style>
+        div {
+            display: block;
+            width: 400px;
+            margin: 0 auto;
+            padding-top: 0px;
+            padding-bottom: 70px;
+            border: 1px solid black;
+        }
+
+        #description{
+            padding: 0px 10px;
+        }
+        img{
+            image-rendering:optimizeQuality;
+        }
+    </style>
+</head>
+
+<header>
+    <h1>Slaughter Garden</h1>
     <hr>
     <!-- nav bar -->
     <nav>
@@ -51,16 +33,22 @@
         <a href="contact.html">Contact Us</a>
     </nav>
     <hr>
-</head>
+</header>
 
 <body>
-    <img src="images/restraunt_home_page.jpg" alt="delicous food image" />
+    <img src="images/restraunt_home_page.jpg" alt="delicous food image" 
+    style=
+    "display: block;
+    width: 400px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 20px 0px;" 
+    />
     <div>
-        <p> Maecenas quis erat et elit ultricies laoreet. Vivamus orci
-            dui, volutpat quis bibendum vitae, rutrum nec magna. Mauris nec mattis leo, non lacinia tellus. Donec luctus
-            massa non nisi blandit pulvinar. Morbi luctus massa metus, a vulputate eros molestie id. In nec lectus ligula.
-            Nulla ac arcu sit amet sapien consectetur scelerisque a nec neque. Donec lacus ex, mattis id semper sit amet,
-            volutpat sed diam. </p>
+        <p id="description"> Maecenas quis erat et elit ultricies laoreet. Vivamus orci dui, volutpat quis bibendum vitae, rutrum nec magna. Mauris
+            nec mattis leo, non lacinia tellus. Donec luctus massa non nisi blandit pulvinar. Morbi luctus massa metus, a
+            vulputate eros molestie id. In nec lectus ligula. Nulla ac arcu sit amet sapien consectetur scelerisque a nec
+            neque. Donec lacus ex, mattis id semper sit amet, volutpat sed diam. </p>
     </div>
 </body>
 <footer>
