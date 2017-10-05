@@ -1,24 +1,90 @@
 <!DOCTYPE html>
+<style>
+    h1,
+    h2,
+    h3,
+    img {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 60%
+    }
+    table{
+        border-collapse: collapse;
+        border:1px solid black;
+        width:95%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    tr,td,th{
+        border:1px solid black;
+    }
+    th{
+        background-color: #B4B4B4;
+    }
+    .trackNumber, .trackTitle{
+        width:25%;
+    }
+    .trackLength{
+        width:50%;
+    }
+    ul{
+        width:80%;
+        margin: 20px auto;
+    }
+</style>
 <html>
 <header>
     <title>Album Page</title>
 </header>
 
 <body>
-    <h1>Slash - Apocalyptic Love</h1>
-    <h2>By: Slash</h2>
-    <h3>Released: May22 2012</h3>
-    <p>Apocalyptic Love is the second solo-project studio album by guitarist Slash. However, it is also the first studio album
-        billed to Slash feat. Myles Kennedy & The Conspirators. The band features vocalist Myles Kennedy, bassist Todd Kerns
-        and drummer Brent Fitz in addition to Slash on guitar. Produced by Eric Valentine, it was released on May 22, 2012s</p>
-    <h2>Band Members</h2>
+    <!-- align is not supported in HTML5 so we need to use some css to center our image -->
+    <img src="labImages\Apocalyptic_Love_Album_Cover.jpg" alt="apocalyptic love album cover" />
+    <h1>Apocalyptic Love</h1>
+    <a href="http://www.slashonline.com/" target="_blank">
+        <h2>Slash</h2>
+    </a>
+    <h3>May 22 2012</h3>
+    <hr />
+    <h2>Band Members and Producers</h2>
     <ul>
         <li>Slash - lead guitar, acoustic guitar, talkbox</li>
         <li>Miles Kennedy - Lead Vocals, rythm guitar</li>
         <li>Tod Kerns - bass, backing vocals, screams</li>
         <li>Brent Fitz - drums</li>
+        <li>Eric Valentine - Producer</li>
     </ul>
+    <h2>Tacks</h2>
+    <table>
+        <thead>
+            <th class="trackNumber">Track #</th>
+            <th class="trackTitle">Track Title</th>
+            <th class="tackLength">Track Length</th>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>"Apocalyptic Love"</td><td>3:28</td></tr>
+            <tr><td>2</td><td>"One Last Thrill"</td><td>3:09</td></tr>
+            <tr><td>3</td><td>"Standing in the Sun"</td><td>4:03</td></tr>
+            <tr><td>4</td><td>"You're a Lie"</td><td>3:50</td></tr>
+            <tr><td>5</td><td>"No More Heroes"</td><td>4:23</td></tr>
+            <tr><td>6</td><td>"Halo"</td><td>3:22</td></tr>
+            <tr><td>7</td><td>"We Will Roam"</td><td>4:49</td></tr>
+            <tr><td>8</td><td>"Anastasia"</td><td>6:07</td></tr>
+            <tr><td>9</td><td>"Not For Me"</td><td>5:21</td></tr>
+            <tr><td>10</td><td>"Bad Rain"</td><td>3:46</td></tr>
+            <tr><td>11</td><td>"Hard & Fast"</td><td>3:02</td></tr>
+            <tr><td>12</td><td>"Far and Away"</td><td>5:14</td></tr>
+            <tr><td>13</td><td>"Shots Fired"</td><td>3:48</td></tr>
+            <tr><td colspan="3">Delux Edition</td></tr>
+            <tr><td>14</td><td>"Carolina"</td><td>3:17</td></tr>
+            <tr><td>15</td><td>"Crazy Life"</td><td>3:40</td></tr>
+        </tbody>
+    </table>
 </body>
-<footer><sub>Text lifted from: <a href="https://en.wikipedia.org/wiki/Apocalyptic_Love">https://en.wikipedia.org/wiki/Apocalyptic_Love</a></sub></footer>
+<footer>
+    <sub>Band member data and image from: 
+        <a href="https://en.wikipedia.org/wiki/Apocalyptic_Love">https://en.wikipedia.org/wiki/Apocalyptic_Love</a></sub>
+</footer>
 
 </html>
