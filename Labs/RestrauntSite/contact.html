@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    a {
+        padding: 2% 2%;
+    }
+
+    footer {
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    p {
+        padding: 0px 10px;
+    }
+
+    .leftColumn {
+        float: left;
+        width: 220px;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .rightColumn {
+        float: left;
+        width: 225px;
+    }
+
+    .leftColumnPadding {
+        padding: 5px 0;
+    }
+
+    .rightColumnPadding {
+        padding: 4px 0;
+    }
+
+    .textInput,
+    select,
+    textArea {
+        width: 100%;
+    }
+
+    textArea {
+        min-height: 100px
+    }
+    .dayCheckbox{
+        width: 9%;
+    }
+</style>
+
+<head>
+    <h1>Slaughter Garden</h1>
+    <title>Contact Page</title>
+    <hr>
+    <!-- nav bar -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <hr>
+</head>
+
+<body>
+    <!-- left column with 5px padding -->
+    <div class="leftColumn">
+        <div class="leftColumnPadding">Name:</div>
+        <div class="leftColumnPadding">Email:</div>
+        <div class="leftColumnPadding">Phone:</div>
+        <div class="leftColumnPadding">Reason for Inquiry:</div>
+        <div class="leftColumnPadding" style="min-height: 100px">Additonal Information:</div>
+        <div class="leftColumnPadding">Have you been to the restraunt?:</div>
+        <div class="leftColumnPadding">Best days to contact you:</div>
+    </div>
+    <!-- right column with 4px padding -->
+    <div class="rightColumn">
+        <form action=# method="POST">
+            <div id="topHalf">
+                <!-- name input -->
+                <div class="rightColumnPadding">
+                    <input class="textInput" type="text" id="name" />
+                </div>
+                <!-- email input -->
+                <div class="rightColumnPadding">
+                    <input class="textInput" type="text" id="email" />
+                </div>
+                <!-- phone input -->
+                <div class="rightColumnPadding">
+                    <input class="textInput" type="text" id="input" />
+                </div>
+                <!-- contact reason dropdown -->
+                <div class="rightColumnPadding">
+                    <select name="reasonDropdown">
+                        <option value="1" selected="selected">Catering</option>
+                        <option value="2">Private Party</option>
+                        <option value="3">Feedback</option>
+                        <option value="3">Other</option>
+                    </select></br>
+                </div>
+                <!-- additonal information text area-->
+                <div class="rightColumnPadding">
+                    <textarea name="info" value="info"></textarea></br>
+                </div>
+            </div>
+            <!-- has visited choice -->
+            <div class="rightColumnPadding">
+                <input type="radio" name="hasVisited" value="No" checked>No</input>
+                <input type="radio" name="hasVisited" value="Yes">Yes</input>
+            </div>
+            <!-- best days to contact -->
+            <div class="rightColumnPadding">
+                <input class="dayCheckbox" type="checkbox" value="Monday">M</input>
+                <input class="dayCheckbox" type="checkbox" value="Tuesday">T</input>
+                <input class="dayCheckbox" type="checkbox" value="Wednesday">W</input>
+                <input class="dayCheckbox" type="checkbox" value="Thursday">Th</input>
+                <input class="dayCheckbox" type="checkbox" value="Friday">F</input>
+            </div>
+            <!-- submit button -->
+            <div class="rightColumnPadding">
+                <input style="float:right" type="submit" value="Send Request">
+            </div>
+        </form>
+        <!-- end of form -->
+    </div>
+    <!-- end of right column -->
+</body>
+
+<footer>
+    <hr>
+    <p>666 Devils Lane, Banana Republic, Atlantis, 9999</p>
+    <p>987-654-3210</p>
+</footer>
+
+</html>
