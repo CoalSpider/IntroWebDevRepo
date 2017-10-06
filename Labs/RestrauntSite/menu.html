@@ -13,20 +13,38 @@
         }
 
         .gridRow {
-            height: 200px;
+            height: 250px;
         }
 
         .gridCell {
             float: left;
             text-align: center;
-            width: 25%;
+            width: 24%;
             margin: 0 4%;
         }
         .grid{
-            background: cornsilk;
+            background: lightgray;
         }
         h4{
             font-size: larger;
+        }
+        table{
+            text-align: left;
+            margin: 0 2.5%;
+            width: 28%;
+        }
+        table tr:nth-child(even){
+            background-color:lightcoral;
+        }
+        table tr:nth-child(odd){
+            background-color:lightgrey;
+        }
+        #beverageTableHead{
+            background-color: grey;
+        }
+        h4{
+            text-decoration: underline;
+            text-decoration-color: lightcoral;
         }
     </style>
 </head>
@@ -44,7 +62,7 @@
 </header>
 
 <body>
-    <div class="grid">
+    <div id="menu" class="grid">
         <!-- row one -->
         <div class="gridRow">
             <div class="gridCell">
@@ -84,6 +102,20 @@
                 $6.95</br>
             </div>
         </div>
+    </div>
+
+    <div id="beverageTable">
+        <table>
+            <thead>
+                <tr><th colspan=2 id="beverageTableHead">Beverages</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Root Beer</td><td>$3.00</td></tr>
+                <tr><td>Hot Sauce</td><td>$1.50</td></tr>
+                <tr><td>Water</td><td>$0.00</td></tr>
+                <tr><td>Jack Daniels</td><td>$5.25</td></tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
