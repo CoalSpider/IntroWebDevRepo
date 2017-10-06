@@ -10,21 +10,33 @@
         .quarterWidth {
             width: 25%;
         }
+
+        .fancyFont {
+            font-family: Impact;
+            font-weight: lighter;
+        }
+
+        #peopleList {
+            font-style: italic;
+        }
     </style>
-    <!-- internal style @ line 39 -->
+    <!-- inline style @ line 39 -->
 </head>
 
 <body>
     <!-- align is not supported in HTML5 so we need to use some css to center our image -->
-    <img src="Apocalyptic_Love_Album_Cover.jpg" alt="apocalyptic love album cover" />
-    <h1>Apocalyptic Love</h1>
+    <div id="imgDiv"></div>
+    <!--
+        <img src="Apocalyptic_Love_Album_Cover.jpg" alt="apocalyptic love album cover" />
+    -->
+    <h1 class="fancyFont">Apocalyptic Love</h1>
     <a href="http://www.slashonline.com/" target="_blank">
         <h2>Slash</h2>
     </a>
     <h3>May 22 2012</h3>
-    <hr />
-    <h2>Band Members and Producers</h2>
-    <ul>
+    <hr>
+    <h2 class="fancyFont">Band Members and Producers</h2>
+    <ul id="peopleList">
         <li>Slash - lead guitar, acoustic guitar, talkbox</li>
         <li>Miles Kennedy - Lead Vocals, rythm guitar</li>
         <li>Tod Kerns - bass, backing vocals, screams</li>

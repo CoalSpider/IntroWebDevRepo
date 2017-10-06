@@ -7,6 +7,18 @@ img {
     text-align: center;
     width: 60%
 }
+#imgDiv{
+    background-image: url("Apocalyptic_Love_Album_Cover.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px 400px;
+    
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+}
 table{
     border-collapse: collapse;
     border:1px solid black;
