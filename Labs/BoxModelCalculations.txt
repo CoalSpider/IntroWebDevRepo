@@ -1,0 +1,42 @@
+#div1{
+    height: 150px;
+    width: 400px;
+    margin: 20px;
+    border: 1px solid red;
+    padding 10px;
+}
+Calculate: 
+    total height
+    total width
+    browser calculated height
+    browser calculated width
+
+m p b T B L R = margin padding border top bottom left right
+cW = contentWidth
+cH = contentHeight
+
+formulaHeight =
+mT + bT + pT + cH + pB + bB + mB
+formulaWidth =
+mL + bL + pL + cW + pR + bR + mR
+
+browserCalculatedHeight =
+bT + pT + cH + pR + bR
+browserFormulaWidth =
+bL + pL + cW + pR + bR
+
+if only one value is specifed for each value the calculation is simplied to...
+Height: margin*2 + border*2 + padding*2 + contentWidth
+Width: margin*2 + border*2 + padding*2 + contentHeight
+browserHeight: border*2 + padding*2 + contentWidth
+browserWidth: border*2 + padding*2 + contentHeight
+
+Therefore:
+total height = 20px*2 + 1px*2 + 10px*2 + 20px == 40px + 2px + 20px + 20px 
+== 82px
+total width = 20px*2 + 1px*2 + 10px*2 + 400px ==  40px + 2px + 20px + 400px 
+== 462px
+browser calculated height = 1px*2 + 10px*2 + 20px == 2px + 20px + 20px 
+== 42px
+browser calculated width = 1px*2 + 10px*2 + 400px == 2px + 20px + 400px 
+== 422px
