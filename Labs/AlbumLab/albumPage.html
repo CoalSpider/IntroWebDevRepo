@@ -2,140 +2,82 @@
 <html>
 
 <head>
+    <!-- BOOTSTRAP -->
+    <!-- metas for bootsrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <!-- css, theme, js -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- title -->
     <title>Album Page</title>
-
+    <!-- external stylesheets -->
     <link href="albumStyles.css" rel="stylesheet" type="text/css">
-
-    <style>
-        .quarterWidth {
-            width: 25%;
-        }
-
-        .fancyFont {
-            font-family: Impact;
-            font-weight: lighter;
-        }
-
-        #peopleList {
-            font-style: italic;
-        }
-    </style>
-    <!-- inline style @ line 39 -->
 </head>
 
 <body>
-    <!-- align is not supported in HTML5 so we need to use some css to center our image -->
-    <div id="imgDiv"></div>
-    <!--
-        <img src="Apocalyptic_Love_Album_Cover.jpg" alt="apocalyptic love album cover" />
-    -->
-    <h1 class="fancyFont">Apocalyptic Love</h1>
+    <!-- bootstrap container fixed width-->
+    <div class="container">
+        <!-- album image -->
+        <img src="Apocalyptic_Love_Album_Cover.jpg" alt="album cover" class="img-responsive img-circle">
+        <!-- album name -->
+        <h1 class="fancyFont">Apocalyptic Love</h1>
+        <!-- band name -->
+        <div id="bandNameContainer">
+            <a href="http://www.slashonline.com/" target="_blank">
+                <h2 id="bandName">Slash</h2>
+            </a>
+        </div>
+        <!-- release date -->
+        <h3>May 22 2012</h3>
 
-    <div id="bandNameContainer">
-        <a href="http://www.slashonline.com/" target="_blank">
-            <h2 id="bandName">Slash</h2>
-        </a>
+        <!-- line -->
+        <hr style="border:1px solid black">
+
+        <h2 class="fancyFont">Band Members and Producers</h2>
+        <!-- member list -->
+        <ul id="peopleList">
+            <li>Slash - lead guitar, acoustic guitar, talkbox</li>
+            <li>Miles Kennedy - Lead Vocals, rythm guitar</li>
+            <li>Tod Kerns - bass, backing vocals, screams</li>
+            <li>Brent Fitz - drums</li>
+            <li>Eric Valentine - Producer</li>
+        </ul>
+
+        <!-- table name -->
+        <h2>Tracks</h2>
+        <!-- tracks table -->
+        <div class="table-responsive">
+            <table class="table table-condensed">
+                <thead class="thead-inverse">
+                    <th>Track #</th>
+                    <th>Track Title</th>
+                    <th>Track Length</th>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>"Apocalyptic Love"</td><td>3:28</td></tr>
+                    <tr><td>2</td><td>"One Last Thrill"</td><td>3:09</td></tr>
+                    <tr><td>3</td><td>"Standing in the Sun"</td><td>4:03</td></tr>
+                    <tr><td>4</td><td>"You're a Lie"</td><td>3:50</td></tr>
+                    <tr><td>5</td><td>"No More Heroes"</td><td>4:23</td></tr>
+                    <tr><td>6</td><td>"Halo"</td><td>3:22</td></tr>
+                    <tr><td>7</td><td>"We Will Roam"</td><td>4:49</td></tr>
+                    <tr><td>8</td><td>"Anastasia"</td><td>6:07</td></tr>
+                    <tr><td>9</td><td>"Not For Me"</td><td>5:21</td></tr>
+                    <tr><td>10</td><td>"Bad Rain"</td><td>3:46</td></tr>
+                    <tr><td>11</td><td>"Hard & Fast"</td><td>3:02</td></tr>
+                    <tr><td>12</td><td>"Far and Away"</td><td>5:14</td></tr>
+                    <tr><td>13</td><td>"Shots Fired"</td><td>3:48</td></tr>
+                    <tr><td colspan="3">Delux Edition</td></tr>
+                    <tr><td>14</td><td>"Carolina"</td><td>3:17</td></tr>
+                    <tr><td>15</td><td>"Crazy Life"</td><td>3:40</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-
-    <h3>May 22 2012</h3>
-    <hr>
-    <h2 class="fancyFont">Band Members and Producers</h2>
-    <ul id="peopleList">
-        <li>Slash - lead guitar, acoustic guitar, talkbox</li>
-        <li>Miles Kennedy - Lead Vocals, rythm guitar</li>
-        <li>Tod Kerns - bass, backing vocals, screams</li>
-        <li>Brent Fitz - drums</li>
-        <li>Eric Valentine - Producer</li>
-    </ul>
-    <h2>Tacks</h2>
-    <table>
-        <thead>
-            <th class="quarterWidth">Track #</th>
-            <th class="quarterWidth">Track Title</th>
-            <th style="width:50%;">Track Length</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>"Apocalyptic Love"</td>
-                <td>3:28</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>"One Last Thrill"</td>
-                <td>3:09</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>"Standing in the Sun"</td>
-                <td>4:03</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>"You're a Lie"</td>
-                <td>3:50</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>"No More Heroes"</td>
-                <td>4:23</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>"Halo"</td>
-                <td>3:22</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>"We Will Roam"</td>
-                <td>4:49</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>"Anastasia"</td>
-                <td>6:07</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>"Not For Me"</td>
-                <td>5:21</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>"Bad Rain"</td>
-                <td>3:46</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>"Hard & Fast"</td>
-                <td>3:02</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>"Far and Away"</td>
-                <td>5:14</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>"Shots Fired"</td>
-                <td>3:48</td>
-            </tr>
-            <tr>
-                <td colspan="3">Delux Edition</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>"Carolina"</td>
-                <td>3:17</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>"Crazy Life"</td>
-                <td>3:40</td>
-            </tr>
-        </tbody>
-    </table>
 </body>
+
 <footer>
     <sub>Band member data and image from: 
         <a href="https://en.wikipedia.org/wiki/Apocalyptic_Love">https://en.wikipedia.org/wiki/Apocalyptic_Love</a></sub>

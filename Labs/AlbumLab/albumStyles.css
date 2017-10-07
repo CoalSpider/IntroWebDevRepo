@@ -5,8 +5,7 @@ img {
     display: block;
     margin: 0 auto;
     text-align: center;
-    width: 60%
-}
+}/*
 #imgDiv{
     background-image: url("Apocalyptic_Love_Album_Cover.jpg");
     background-repeat: no-repeat;
@@ -18,29 +17,21 @@ img {
     width: 400px;
     height: 400px;
     border: 1px solid black;
-}
-table{
-    border-collapse: collapse;
-    border:1px solid black;
-    width:95%;
-    text-align: center;
-    margin: 0 auto;
-    background-color: whitesmoke;
-}
+} */
+/* overriding bootstraps table stuff  */
 tbody{
     font-style: italic;
 }
 tbody tr:nth-child(even){
     background-color: lightgray;
 }
-tr,td,th{
-    border:1px solid black;
-}
 th{
     background-color: #B4B4B4;
 }
+table,th,td{
+    border: 1px solid black;
+}
 ul{
-    width:80%;
     margin: 20px auto;
 }
 /* Styling for band name link */
@@ -60,4 +51,17 @@ a:hover{
 }
 #bandName:hover{
     background-color: lightgray;
+}
+
+.quarterWidth {
+    width: 25%;
+}
+
+.fancyFont {
+    font-family: Impact;
+    font-weight: lighter;
+}
+
+#peopleList {
+    font-style: italic;
 }
