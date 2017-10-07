@@ -3,128 +3,168 @@
 
 
 <head>
-    <title>Contact Page</title>
-
+    <!-- BOOTSTRAP -->
+    <!-- metas for bootsrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <!-- css, theme, js -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- external stylesheet -->
     <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
 
     <style>
-        .leftColumn {
-            float: left;
-            width: 220px;
-            text-align: right;
-            padding-right: 20px;
+        @media (min-width: 481px) {
+            .left-column {
+                text-align: right;
+            }
         }
 
-        .rightColumn {
-            float: left;
-            width: 225px;
+        @media (max-width: 765px) {
+            .left-column {
+                text-align: left;
+            }
         }
 
-        .leftColumnPadding {
-            padding: 5px 0;
+        #content {
+            max-width: 600px;
+            padding: 0;
+            margin: 0;
         }
 
-        .rightColumnPadding {
-            padding: 4px 0;
+        .form-row {
+            margin: 2% auto;
         }
 
-        .textInput,
-        select,
-        textArea {
-            width: 100%;
+        .check-box-label {
+            padding-right: 6%;
         }
 
-        textArea {
-            min-height: 100px
+        #info {
+            min-height: 125px;
         }
 
-        .dayCheckbox {
-            width: 9%;
+        label{
+            font-weight: normal;
         }
-        .requiredField{
+        .bold-font {
             font-weight: bold;
         }
     </style>
+    <title>Contact Page</title>
 </head>
 
 <header>
     <h1>Slaughter Garden</h1>
-    <hr>
-    <!-- nav bar -->
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-    <hr>
+    <ul class="nav nav-tabs">
+        <li><a href="home.html"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+    </ul>
 </header>
 
 <body>
-    <!-- left column with 5px padding -->
-    <div class="leftColumn">
-        <div class="leftColumnPadding requiredField">Name:</div>
-        <div class="leftColumnPadding requiredField">Email:</div>
-        <div class="leftColumnPadding requiredField">Phone:</div>
-        <div class="leftColumnPadding">Reason for Inquiry:</div>
-        <div class="leftColumnPadding" style="min-height: 100px">Additonal Information:</div>
-        <div class="leftColumnPadding">Have you been to the restraunt?:</div>
-        <div class="leftColumnPadding">Best days to contact you:</div>
-    </div>
-    <!-- right column with 4px padding -->
-    <div class="rightColumn">
-        <form action=# method="POST">
-            <div id="topHalf">
-                <!-- name input -->
-                <div class="rightColumnPadding">
-                    <input class="textInput" type="text" id="name" />
+    <div id="content" class="container">
+        <form action="#" method="POST" class="form-group">
+
+            <div class="row form-row">
+                <div class="col-sm-5 left-column" style="display:block;">
+                    <lable class="bold-font" for="name">Name</lable>
                 </div>
-                <!-- email input -->
-                <div class="rightColumnPadding">
-                    <input class="textInput" type="text" id="email" />
+                <div class="col-sm-7">
+                    <input id="name" class="form-control form-inline" type="text">
                 </div>
-                <!-- phone input -->
-                <div class="rightColumnPadding">
-                    <input class="textInput" type="text" id="input" />
+            </div>
+
+            <div class="row form-row">
+                <div class="col-sm-5 left-column">
+                    <lable class="bold-font" for="email">Email</lable>
                 </div>
-                <!-- contact reason dropdown -->
-                <div class="rightColumnPadding">
-                    <select name="reasonDropdown">
+                <div class="col-sm-7">
+                    <input id="email" class="form-control form-inline" type="text">
+                </div>
+            </div>
+
+            <div class="row form-row">
+                <div class="col-sm-5 left-column">
+                    <lable class="bold-font" for="phone-number">Phone</lable>
+                </div>
+                <div class="col-sm-7">
+                    <input id="phone-number" class="form-control form-inline" type="text">
+                </div>
+            </div>
+
+            <div class="row form-row">
+                <div class="col-sm-5 left-column">
+                    <label for="reason-dropdown">Reason for Inquiry</label>
+                </div>
+                <div class="col-sm-7">
+                    <select class="form-control" id="reason-dropdown">
                         <option value="1" selected="selected">Catering</option>
                         <option value="2">Private Party</option>
                         <option value="3">Feedback</option>
                         <option value="3">Other</option>
-                    </select></br>
-                </div>
-                <!-- additonal information text area-->
-                <div class="rightColumnPadding">
-                    <textarea name="info" value="info"></textarea></br>
+                    </select>
                 </div>
             </div>
-            <!-- has visited choice -->
-            <div class="rightColumnPadding">
-                <input type="radio" name="hasVisited" value="No" checked>No</input>
-                <input type="radio" name="hasVisited" value="Yes">Yes</input>
+
+            <div class="row form-row">
+                <div class="col-sm-5 left-column">
+                    <label class="bold-font" for="info">Additonal Information</label>
+                </div>
+                <div class="col-sm-7">
+                    <textarea id="info" class="form-control" value="info"></textarea>
+                </div>
             </div>
-            <!-- best days to contact -->
-            <div class="rightColumnPadding">
-                <input class="dayCheckbox" type="checkbox" value="Monday">M</input>
-                <input class="dayCheckbox" type="checkbox" value="Tuesday">T</input>
-                <input class="dayCheckbox" type="checkbox" value="Wednesday">W</input>
-                <input class="dayCheckbox" type="checkbox" value="Thursday">Th</input>
-                <input class="dayCheckbox" type="checkbox" value="Friday">F</input>
+
+            <div class="row form-row">
+                <div class="col-sm-5 left-column">
+                    <label for="radio">Have you been to the restraunt?</label>
+                </div>
+                <div class="col-sm-7">
+                    <label class="radio-inline">
+                            <input type="radio" name="hasVisited" value="No" checked>No</input>        
+                    </label>
+
+                    <label class="radio-inline">
+                            <input type="radio" name="hasVisited" value="No">Yes</input>        
+                    </label>
+                </div>
             </div>
-            <!-- submit button -->
-            <div class="rightColumnPadding">
-                <input style="float:right" type="submit" value="Send Request">
+        
+            <div class="row form-row">
+                <div class="col-sm-5 left-column">
+                    <label for="checkbox">Best days to contact you:</label>
+                </div>
+                <div class="col-sm-7">
+                    <label class="checkbox-inline check-box-label">
+                        <input type="checkbox" id="Monday" value="Monday">M</label>
+                    </label>
+                    <label class="checkbox-inline check-box-label">
+                         <input type="checkbox" id="Tuesday" value="Tuesday">T</label>
+                    </label>
+                    <label class="checkbox-inline check-box-label">
+                        <input type="checkbox" id="Wednesday" value="Wednesday">W</label>
+                    </label>
+                    <label class="checkbox-inline check-box-label">
+                         <input type="checkbox" id="Thursday" value="Thursday">Th</label>
+                    </label>
+                    <label class="checkbox-inline check-box-label">
+                        <input type="checkbox" id="Friday" value="Friday">F</label>
+                    </label>
+                </div>
+            </div>
+            <div class="row form-row">
+                <div class="col-sm-12">
+                    <input style="float:right" type="submit" value="Send Request">
+                </div>
             </div>
         </form>
-        <!-- end of form -->
     </div>
-    <!-- end of right column -->
 </body>
 
 <footer>
-    <hr>
     <p>666 Devils Lane, Banana Republic, Atlantis, 9999</p>
     <p>987-654-3210</p>
 </footer>

@@ -2,101 +2,113 @@
 <html>
 
 <head>
-    <title>Menu Page</title>
-
+    <!-- BOOTSTRAP -->
+    <!-- metas for bootsrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <!-- css, theme, js -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- external stylesheet -->
     <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
 
     <style>
-        .grid {
-            margin: 0 auto;
-            width: 95%;
-        }
-
-        .gridRow {
-            height: 250px;
-        }
-
-        .gridCell {
-            float: left;
-            text-align: center;
-            width: 24%;
-            margin: 0 4%;
-        }
-        .grid{
-            background: lightgray;
-        }
-        h4{
-            font-size: larger;
-        }
-        table{
+        #beverageTable {
+            margin: 2.5% 0;
             text-align: left;
-            margin: 0 2.5%;
-            width: 28%;
         }
-        table tr:nth-child(even){
-            background-color:lightcoral;
+
+        #beverageTable tr:nth-child(odd) {
+            background-color: lightgrey;
         }
-        table tr:nth-child(odd){
-            background-color:lightgrey;
+
+        #beverageTableHead {
+            background-color: lightcoral;
         }
-        #beverageTableHead{
-            background-color: grey;
+
+        h4 {
+            border-bottom: 2px solid lightcoral;
         }
-        h4{
-            text-decoration: underline;
-            text-decoration-color: lightcoral;
+        #items-menu,#beverage-menu{
+            text-align: center;
+            background-color: #E9E9E9;
+            margin: 2%;
+            padding: 1%;
         }
     </style>
+    <!-- debug styles -->
+    <!--<style>
+        div {
+            border: 1px solid red;
+        }
+
+        body {
+            border: 1px solid blue;
+        }
+
+        h4 {
+            border: 1px solid green;
+        }
+        table{
+            border: 1px solid pink;
+        }
+        thead{
+            border:1px solid yellow;
+        }
+        footer{
+            border: 1px dotted black;
+        }
+    </style>-->
+    <title>Menu Page</title>
 </head>
 
 <header>
     <h1>Slaughter Garden</h1>
-    <hr>
-    <!-- nav bar -->
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-    <hr>
+    <ul class="nav nav-tabs">
+        <li><a href="home.html"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li class="active"><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 </header>
 
 <body>
-    <div id="menu" class="grid">
+    <!-- items menu -->
+    <div id="items-menu" class="container-fluid">
         <!-- row one -->
-        <div class="gridRow">
-            <div class="gridCell">
+        <div class="row">
+            <div class="col-md-4">
                 <h4>Slaughter Burger</h4>
                 A Slaughter Garden classic!</br>
                 A devilishly good 1/2lb patty on a toasted bun with hot-sauce, onion rings, pepperjack cheese, and ketchup. Served with a
                 side of curly fries</br>
                 $9.95</br>
             </div>
-            <div class="gridCell">
+            <div class="col-md-4">
                 <h4>Loaded Nachos</h4>
                 Nachos with 4 kinds of cheese, and 3 types of meat! Your choice of meat: turkey, steak, ground-beef, phesant, ham, chicken,
                 or long pig</br>
                 $7.95</br>
             </div>
-            <div class="gridCell">
+            <div class="col-md-4">
                 <h4>Signature Sausage</h4>
                 Three Polish sausage served with a side of mac 'n cheese</br>
                 $8.50</br>
             </div>
         </div>
         <!-- row two -->
-        <div class="gridRow">
-            <div class="gridCell">
+        <div class="row">
+            <div class="col-md-4">
                 <h4>Ham and Eggs</h4>
                 Two eggs over easy with a slice of ham and toast.</br>
                 $4.95</br>
             </div>
-            <div class="gridCell">
+            <div class="col-md-4">
                 <h4>3lb Steak</h4>
                 A three pound steak! Grilled to perfection!</br>
                 $49.95</br>
             </div>
-            <div class="gridCell">
+            <div class="col-md-4">
                 <h4>Turkey Sandwitch</h4>
                 Smoked turkey, lettuce, tomato, mayo, on a grilled sourdough bun</br>
                 $6.95</br>
@@ -104,23 +116,25 @@
         </div>
     </div>
 
-    <div id="beverageTable">
-        <table>
-            <thead>
-                <tr><th colspan=2 id="beverageTableHead">Beverages</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>Root Beer</td><td>$3.00</td></tr>
-                <tr><td>Hot Sauce</td><td>$1.50</td></tr>
-                <tr><td>Water</td><td>$0.00</td></tr>
-                <tr><td>Jack Daniels</td><td>$5.25</td></tr>
-            </tbody>
-        </table>
+    <div id="beverage-menu" class="container-fluid">
+        <!-- beverage menu -->
+        <div class="table-responsive">
+            <table id="beverageTable" class="table table-condensed table-bordered" style="max-width: 500px;">
+                <thead>
+                    <tr><th colspan=2 id="beverageTableHead">Beverages</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Root Beer</td><td>$3.00</td></tr>
+                    <tr><td>Hot Sauce</td><td>$1.50</td></tr>
+                    <tr><td>Water</td><td>$0.00</td></tr>
+                    <tr><td>Jack Daniels</td><td>$5.25</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 
 <footer>
-    <hr>
     <p>666 Devils Lane, Banana Republic, Atlantis, 9999</p>
     <p>987-654-3210</p>
 </footer>

@@ -2,60 +2,90 @@
 <html>
 
 <head>
-    <title>Home Page</title>
+    <!-- BOOTSTRAP -->
+    <!-- metas for bootsrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <!-- css, theme, js -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- external stylesheet -->
     <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+    <!-- internal stylesheet -->
+    <!-- title -->
     <style>
-        div {
-            display: block;
-            width: 400px;
-            margin: 0 auto;
-            padding-top: 0px;
-            padding-bottom: 70px;
-            border: 1px solid black;
+        .maxHalf {
+            max-width: 450px;
         }
 
-        #description{
-            padding: 0px 10px;
+        img {
+            display: block;
+            width: 400px;
+            height: 150px;
+            margin: 20px auto;
         }
-        img{
-            image-rendering:optimizeQuality;
-        }
-        #homeContent{
-            background-color: lightgray;
+
+        #description {
+            background: lightgray;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 20px auto;
+            margin-top: 0px;
+            text-indent: 50px;
         }
     </style>
+    <title>Home Page</title>
 </head>
 
 <header>
     <h1>Slaughter Garden</h1>
-    <hr>
-    <!-- nav bar -->
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-    <hr>
+    <!-- TODO replace tabs with full navbar 
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="home.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="home.html"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
 </header>
 
 <body>
-    <img src="images/restraunt_home_page.jpg" alt="delicous food image" 
-    style=
-    "display: block;
-    width: 400px;
-    height: 150px;
-    margin: 0 auto;
-    padding: 20px 0px;" 
-    />
-    <div id="homeContent">
-        <p id="description"> Maecenas quis erat et elit ultricies laoreet. Vivamus orci dui, volutpat quis bibendum vitae, rutrum nec magna. Mauris
-            nec mattis leo, non lacinia tellus. Donec luctus massa non nisi blandit pulvinar. Morbi luctus massa metus, a
-            vulputate eros molestie id. In nec lectus ligula. Nulla ac arcu sit amet sapien consectetur scelerisque a nec
-            neque. Donec lacus ex, mattis id semper sit amet, volutpat sed diam. </p>
+    <div class="container maxHalf">
+
+        <div class="row">
+            <div class="col-md-12">
+                <img src="images/restraunt_home_page.jpg" alt="delicous food image" />
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div id="description" class="col-md-12">
+                <p> Maecenas quis erat et elit ultricies laoreet. Vivamus orci dui, volutpat quis bibendum vitae, rutrum nec
+                    magna. Mauris nec mattis leo, non lacinia tellus. Donec luctus massa non nisi blandit pulvinar. Morbi
+                    luctus massa metus, a vulputate eros molestie id. In nec lectus ligula. Nulla ac arcu sit amet sapien
+                    consectetur scelerisque a nec neque. Donec lacus ex, mattis id semper sit amet, volutpat sed diam. </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="jumbotron text-center col-md-12">
+                <h5>New restraunt grand opening at:</br> 4th street Lynch Town 17646</h5>
+            </div>
+        </div>
     </div>
 </body>
+
 <footer>
-    <hr>
     <p>666 Devils Lane, Banana Republic, Atlantis, 9999</p>
     <p>987-654-3210</p>
 </footer>
