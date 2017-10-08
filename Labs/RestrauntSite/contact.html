@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="bootstrap3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap3.3.7/css/bootstrap-theme.min.css">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="bootstrap3.3.7/js/bootstrap.min.js"></script>
     <!-- external stylesheet -->
     <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
@@ -47,9 +47,10 @@
             min-height: 125px;
         }
 
-        label{
+        label {
             font-weight: normal;
         }
+
         .bold-font {
             font-weight: bold;
         }
@@ -60,10 +61,67 @@
 <header>
     <h1>Slaughter Garden</h1>
     <ul class="nav nav-tabs">
-        <li><a href="home.html"><span class="glyphicon glyphicon-home"></span></a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li class="active"><a href="contact.html">Contact</a></li>
+        <li>
+            <a href="home.html"><span class="glyphicon glyphicon-home"></span></a>
+        </li>
+        <li>
+            <a href="menu.html">Menu</a>
+        </li>
+        <li class="active">
+            <a href="contact.html">Contact</a>
+        </li>
     </ul>
+    <div class="container">
+        <div id="carousel" class="carousel slide" data-ride="carousel" style="margin-bottom: 5%;">
+            <!-- indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <!-- wrappers for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active sizing-for-items">
+                    <img src="images/restraunt_home_page.jpg" alt="restraunt image" class="carosel-image">
+                    <div class="carousel-caption caption">
+                        Were opening a new location! </br>
+                        4th street Lynch Town 17646
+                    </div>
+                </div>
+                <div class="item sizing-for-items">
+                    <img src="images/fall_leaves_by_jacktheterrier.jpg" alt="menu image " class="carosel-image">
+                    <div class="carousel-caption caption">
+                        We're rolling out our seasonal menu, with special options for this season.
+                    </div>
+                </div>
+                <div class="item sizing-for-items">
+                    <img src="images/sg_special_brew.jpg" alt="drink image" class="carosel-image">
+                    <div class="carousel-caption caption">
+                        The Drink of the Month is SG Special Brew.
+                    </div>
+                </div>
+            </div>
+            <!-- controls -->
+            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+        </div>
+    </div>
+    <!-- if javascript is disabled warn the user -->
+    <noscript>
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-asterisk"></span>
+                <strong>Warning!</strong> This site is best viewed with JavaScript enabled!
+                <span class="glyphicon glyphicon-asterisk"></span>
+            </div>
+        </div>
+    </noscript>
 </header>
 
 <body>
@@ -134,7 +192,7 @@
                     </label>
                 </div>
             </div>
-        
+
             <div class="row form-row">
                 <div class="col-sm-5 left-column">
                     <label for="checkbox">Best days to contact you:</label>
