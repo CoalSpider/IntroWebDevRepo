@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/JavaScript" src="main.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .alignRight {
+            text-align: right;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container pull-left">
+        <div>
+            <h1>Display Evens</h1>
+        </div>
+        <form id="forms" onsubmit="return displayMsg();" class="form-inline">
+            <!-- start num input -->
+            <div class="row">
+                <div class="col-md-2 alignRight col-md-offset-0">
+                    <label for="start">Starting Number</label>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="start">
+                    </div>
+                </div>
+            </div>
+
+            <!-- end num input -->
+            <div class="row">
+                <div class="col-md-2 alignRight col-md-offset-0">
+                    <label for="end">Ending Number</label>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="end">
+                    </div>
+                </div>
+            </div>
+
+            <!-- step input -->
+            <div class="row">
+                <div class="col-md-2 alignRight col-md-offset-0">
+                    <label for="step">Step</label>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="step">
+                    </div>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col-md-2" style="text-align: center; padding-left:12em">
+                    <button type="submit" id="displayEvens" class="btn btn-default">Display Evens</button>
+                </div>
+            </div>
+
+        </form>
+
+        <div id="results" class="">
+        </div>
+    </div>
+</body>
+
+</html>
