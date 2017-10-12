@@ -77,6 +77,7 @@ function validateInput() {
     if (Number(step) < 0) {
         markInputAsError("step");
         appendStepIsNegativeMsg();
+        inputHasError = true;
     }
 
     // if start and end are valid then check that start < end
